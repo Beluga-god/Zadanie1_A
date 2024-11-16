@@ -12,8 +12,12 @@ public class Main {
         System.out.println();
 
         System.out.println("Пример работы метода A02:");
-        String[] a02Args = {"Привет", "мир", "как", "дела"};
-        taskA.A02(a02Args);  // Пример с аргументами для переворота
+        if (args.length > 0) {
+            // Аргументы передаются через командную строку
+            taskA.A02(args);  // Используем аргументы, переданные при запуске программы
+        } else {
+            System.out.println("Не переданы аргументы для метода A02.");
+        }
         System.out.println();
 
         System.out.println("Пример работы метода A03:");
